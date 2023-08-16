@@ -1,5 +1,5 @@
 <script >
-import Student from './components/Student.vue'
+import Student from './views/Student.vue'
 
 export default {
   name:'App',
@@ -13,7 +13,10 @@ export default {
   <Student/>
 </template>
 
-<style scoped>
+<style>
+#app{
+  text-align:center;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
