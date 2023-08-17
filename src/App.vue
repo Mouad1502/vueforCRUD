@@ -1,22 +1,36 @@
-<script >
-import Student from './views/Student.vue'
-
-export default {
-  name:'App',
-  components:{
-    Student
-  }
-}
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <Student/>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="javascript:void(0)">NavBar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/students">Students List</a>
+                </li>
+              </ul>
+            <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <br>
+  <RouterView />
 </template>
 
-<style>
-#app{
-  text-align:center;
-}
+<style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
